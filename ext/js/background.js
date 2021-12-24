@@ -37,9 +37,14 @@ function getGoogleMeetTabs(windowList) {
 
 function processCommand(command, googleMeetTabs) {
   googleMeetTabs.forEach((tab) => {
-    chrome.tabs.sendMessage(tab.id, { command: command }, (response) => {
-      setIcon(response.message)
-    })
+    if (command === 'go_to_meet') {
+      chrome.tabs.update(tab.id, { active: true })
+    }
+    else {
+      chrome.tabs.sendMessage(tab.id, { command: command }, (response) => {
+        setIcon(response.message)
+      })
+    }
   })
 }
 

@@ -4,7 +4,7 @@
   "author": "Matt Simonis",
   "version": "0.0.5",
   "manifest_version": 2,
-  "description": "Easy muting/unmuting for when you're in a Google Meet.",
+  "description": "Easy muting/unmuting/going to the meet tab when you're in a Google Meet.",
   "icons": {
     "32": "icons/icon32.png",
     "48": "icons/icon48.png",
@@ -53,6 +53,13 @@
       "description": "Unmute",
       "suggested_key": {
         "default": "Ctrl+Shift+B"
+      },
+      "global": true
+    },
+    "go_to_meet": {
+      "description": "Go to the Meet tab",
+      "suggested_key": {
+        "default": "Ctrl+Shift+G"
       },
       "global": true
     }
