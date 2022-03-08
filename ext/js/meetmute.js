@@ -115,7 +115,7 @@ chrome.runtime.onMessage.addListener(
 const keydownEvent = new KeyboardEvent('keydown', {
   "key": "d",
   "code": "KeyD",
-  "metaKey": true,
+  "ctrlKey": true,
   "charCode": 100,
   "keyCode": 100,
   "which": 100
